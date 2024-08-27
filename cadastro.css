@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+	max-width: 1280px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Ubuntu, serif;
+
+	--common-font-family: Ubuntu;
+	--common-transition: all 0.3s ease-in-out;
+	--common-font-color: #acefcb;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mainCommon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	a {
+		text-decoration: none;
+		outline: none;
+	}
+
+	.submitButtons {
+
+		margin-top: calc(0.5vw + 0.5vh);
+
+	}
+
+	.submitInput {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+
+		.submitButton {
+
+			cursor: pointer;
+			font-size: calc(0.6vw + 0.6vh);
+			border-radius: var(--border-radius);
+			font-family: var(--common-font-family), sans-serif;
+			font-weight: bold;
+			color: var(--common-font-color);
+			width: 100%;
+			margin-bottom: calc(0.3vw + 0.3vh);
+			background-color: mediumseagreen;
+			border: calc(0.12vw + 0.12vh) solid mediumseagreen;
+			padding: var(--input-padding);
+			transition: var(--common-transition);
+		}
+
+		.submitButton.warning {
+			background-color: rgb(243, 199, 78);
+			border: calc(0.12vw + 0.12vh) solid rgb(243, 199, 78);
+			color: rgb(255, 229, 159);
+		}
+
+		.submitButton.warning:hover {
+			color: rgb(243, 199, 78);
+			border: calc(0.12vw + 0.12vh) solid rgb(255, 229, 159);
+			background-color: rgb(255, 229, 159);
+		}
+
+		.submitButton:hover {
+			border: calc(0.12vw + 0.12vh) solid var(--common-font-color);
+			background-color: var(--common-font-color);
+			color: mediumseagreen;
+		}
+
+	}
+
+	.display-flex-center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.width-100 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.width-100-noflex {
+		width: 100%;
+	}
+
+	.left-input-margin {
+		margin-right: 0.5vw;
+	}
+
+	.right-input-margin {
+		margin-left: 0.5vw;
+	}
+
+	.background {
+		opacity: 0.7;
+		z-index: -1;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-image: url("public/images/loginBackground.png");
+	}
+	
+	.card {
+		background-color: #f9fffb;
+		padding: calc(1vw + 1vh) calc(1.5vw + 1.5vh);
+		border-radius: var(--border-radius);
+
+		--input-padding: calc(0.3vw + 0.3vh);
+		--border-radius: calc(1vw + 1vh);
+
+		.cardTitle {
+			font-size: calc(1.7vw + 1.7vh);
+		}
+
+		form {
+
+			text-align: left;
+
+			.labelInput {
+				width: 100%;
+				font-family: var(--common-font-family), sans-serif;
+				font-size: calc(0.6vw + 0.6vh);
+			}
+
+			.textInput {
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				input, select {
+					box-sizing: content-box;
+					appearance: none;
+					height: calc(1vw + 1vh);
+				}
+				
+				input, select {
+					background-color: #f9fffb;
+					font-size: calc(0.6vw + 0.6vh);
+					font-family: var(--common-font-family), sans-serif;
+					margin-top: 0.3vw;
+					border-radius: var(--border-radius);
+					outline: none;
+					padding: var(--input-padding);
+					border: calc(0.12vw + 0.12vh) solid #e8e8e8;
+					width: 100%;
+					margin-bottom: calc(0.5vw + 0.5vh);
+					transition: var(--common-transition);
+				}
+
+				input:focus, select:hover {
+					border: calc(0.12vw + 0.12vh) solid var(--common-font-color);
+				}
+
+				select:hover {
+					cursor: pointer;
+				}
+				
+			}
+			
+			
+			label {
+				text-align: left;
+			}
+			
+		}
+		
+	}
+	
+}
